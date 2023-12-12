@@ -51,8 +51,8 @@ public class Seller implements Serializable {
         this.email = email;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBirthDate(java.sql.Date birthDate) {
+        return this.birthDate;
     }
 
     public void setBirthDate(Date birthDate) {
