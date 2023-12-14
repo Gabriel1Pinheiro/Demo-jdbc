@@ -5,12 +5,15 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import java.util.Scanner;
 import java.util.Date;
 import java.util.List;
 
 
 public class Program {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
@@ -50,5 +53,17 @@ public class Program {
         seller.setName("Martha Waine");
         sellerDao.update(seller);
         System.out.println("Update completo!");
+
+        System.out.println();
+
+        System.out.println("\n=== TESTE 6: seller delete =====");
+        System.out.println("Insira o id para teste de exclusão");
+        int id = sc.nextInt();
+        sellerDao.deleteById(id);
+        System.out.println("Delete completo!");
+
+        sc.close();
+
+
     }
 }
