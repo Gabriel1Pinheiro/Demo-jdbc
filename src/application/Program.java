@@ -40,7 +40,7 @@ public class Program {
 
         System.out.println();
 
-        System.out.println("\n=== TESTE 4: seller insert =====");
+        System.out.println("=== TESTE 4: seller insert =====");
         Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Id novo inserido! = " + newSeller.getId());
@@ -48,7 +48,7 @@ public class Program {
 
         System.out.println();
 
-        System.out.println("\n=== TESTE 5: seller update =====");
+        System.out.println("=== TESTE 5: seller update =====");
         seller = sellerDao.findById(1);
         seller.setName("Martha Waine");
         sellerDao.update(seller);
@@ -56,7 +56,7 @@ public class Program {
 
         System.out.println();
 
-        System.out.println("\n=== TESTE 6: seller delete =====");
+        System.out.println("=== TESTE 6: seller delete =====");
         System.out.println("Insira o id para teste de exclusão");
         int id = sc.nextInt();
         sellerDao.deleteById(id);
